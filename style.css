@@ -1,0 +1,577 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: rgb(10, 10, 10);
+  --color-titles: rgb(255, 255, 255);
+  --color-title2: rgb(65, 203, 90);
+  --color-black: black;
+  --background-icon: rgb(21, 21, 21);
+  --color-grey: grey;
+}
+body.mood {
+  --color-background: rgba(255, 255, 255, 0.79);
+  --color-titles: rgb(0, 0, 0);
+  --color-title2: rgb(65, 203, 90);
+  --color-black: rgb(255, 255, 255);
+  --background-icon: rgb(255, 255, 255);
+  --color-grey: grey;
+}
+body {
+  height: auto;
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-titles);
+}
+body.mood .moon{
+  display: block;
+}
+body.mood .sun{
+  display: none;
+}
+.mdlight .moon{
+  display: none;
+}
+.mdlight .sun{
+  display: block;
+}
+
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 90px;
+}
+
+.section1 .infoPerson {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.navbar {
+  background-color: var(--color-title2);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid transparent;
+  color: var(--color-black);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar button:hover {
+  background-color: rgba(165, 249, 165, 0.316);
+}
+.profileNav,
+.menuDrop {
+  display: none;
+}
+.profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.menu {
+  display: none;
+}
+.drakmood button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid transparent;
+  color: var(--color-black);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}
+.drakmood button i {
+  color: var(--color-black);
+}
+.titlePr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titlePr h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-titles);
+}
+
+.titlePr h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-grey);
+}
+
+.btnStart button {
+  padding: 11px 30px;
+  background-color: var(--color-title2);
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--color-black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btnStart .btnlightmood2{
+  display: none;
+}
+
+.links .btnlightmood i{
+  font-size: 20px;
+} 
+
+.contactSocial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.contactSocial .link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link .linkicon i {
+  font-size: 25px;
+  background-color: var(--background-icon);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.link .titleLink h2 {
+  color: var(--color-titles);
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.link .titleLink h3 a {
+  text-decoration: none;
+  color: var(--color-title2);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.link .titleLink h3 i {
+  font-size: 20px;
+  color: var(--color-title2);
+}
+
+.section2 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-background);
+  padding: 20px;
+}
+
+.section2 .bartitle {
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+}
+.bartitle h2 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-title2);
+}
+.bartitle i {
+  font-size: 60px;
+  color: var(--color-titles);
+}
+
+.textBoutMe {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+}
+.textBoutMe .welcome h2 {
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: var(--color-titles);
+}
+
+.pr p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+}
+.pr p span {
+  color: var(--color-title2);
+}
+.about {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 200px;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about .imgAbout img {
+  height: auto;
+  width: 100%;
+}
+
+.btnabout button {
+  padding: 8px 20px;
+  background-color: var(--color-title2);
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--color-black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btnabout button i {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/*section skills */
+
+.section3 {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.section3 .titleSk {
+  width: 100%;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 20px;
+}
+.titleSk h2 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-title2);
+}
+.titleSk i {
+  font-size: 50px;
+  color: var(--color-titles);
+}
+
+.aboutMyskills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  gap: 60px;
+  padding: 30px;
+  padding: 15px;
+}
+
+.packMySkils {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 50px;
+  padding: 0px 15px;
+}
+
+.prSkills h3 {
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+  text-align: center;
+}
+.prSkills h3 span {
+  color: var(--color-title2);
+}
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.skill h3 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+}
+.skill i {
+  font-size: 55px;
+  color: var(--color-titles);
+}
+.skills {
+  display: flex;
+  width: 50%;
+  gap: 20px;
+}
+.titlePack h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: var(--color-titles);
+}
+@media screen and (max-width: 750px) {
+  .section1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 50px;
+    padding: 10px;
+  }
+  .navbar {
+    background-color: var(--color-title2);
+    padding: 30px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .btnStart .btnlightmood2 {
+    display: block;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--color-titles);
+  }
+  .btnStart .btnlightmood2 i{
+    font-size: 20px;
+  }
+  .btnStart{
+    display: flex;
+    gap: 5px;
+  }
+  .profileNav h2 {
+    width: 100%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-black);
+  }
+  .profileNav,
+  .menuDrop {
+    display: block;
+  }
+  .menuDrop i {
+    font-size: 30px;
+    color: var(--color-black);
+    cursor: pointer;
+  }
+  .menu.active {
+    display: flex;
+  }
+  .menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background-color: rgba(42, 42, 42, 0.207);
+    position: absolute;
+    top: 0;
+    position: fixed;
+  }
+  .menu .linksMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu .linksMenu button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid transparent;
+    color: var(--color-black);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--color-titles);
+  }
+  .navDrop {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: absolute;
+    top: 50px;
+  }
+
+  .profileNavDrop h2 {
+    width: 100%;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-titles);
+  }
+  .closeMenu i {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .contactSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about .imgAbout img {
+    display: none;
+  }
+
+  .section2 {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-background);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .bartitle h2,
+  .titleSk h2 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-title2);
+  }
+  .bartitle i,
+  .titleSk i {
+    font-size: 30px;
+    color: var(--color-titles);
+  }
+  .section3 {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .prSkills h3 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-titles);
+    text-align: center;
+  }
+  .prSkills h3 span {
+    color: var(--color-title2);
+  }
+  .skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+  .titlePack h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: var(--color-titles);
+  }
+  .aboutMyskills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 30px;
+    padding: 15px;
+  }
+
+  .packMySkils {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+}
