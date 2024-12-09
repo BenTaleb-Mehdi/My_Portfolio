@@ -755,14 +755,22 @@ body.mood .sun {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
     height: auto;
     width: 100%;
+    padding: 20px;
   }
   .imgproject img {
     width: 100%;
     height: auto;
     border-radius: 30px;
+  }
+  .projects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
   }
 
   .morePr {
