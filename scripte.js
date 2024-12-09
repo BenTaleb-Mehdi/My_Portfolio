@@ -34,3 +34,12 @@ btnLightMode2.addEventListener("click", () => {
 });
 
 
+
+const btnMore = document.querySelector(".btnMore"),
+  displayMore = document.querySelector(".morePr");
+
+  btnMore.addEventListener('click',()=>{
+    displayMore.classList.toggle('active');
+  })
+
+

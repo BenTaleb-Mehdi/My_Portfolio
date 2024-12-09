@@ -26,16 +26,16 @@ body {
   background-color: var(--color-background);
   color: var(--color-titles);
 }
-body.mood .moon{
+body.mood .moon {
   display: block;
 }
-body.mood .sun{
+body.mood .sun {
   display: none;
 }
-.mdlight .moon{
+.mdlight .moon {
   display: none;
 }
-.mdlight .sun{
+.mdlight .sun {
   display: block;
 }
 
@@ -55,7 +55,31 @@ body.mood .sun{
   flex-direction: column;
   gap: 30px;
 }
-.navbar {
+.statistique {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.statistique .st1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.st1 span {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.st1 h3 {
+  color: var(--color-title2);
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navbar .links {
   background-color: var(--color-title2);
   padding: 10px;
   border-radius: 10px;
@@ -81,6 +105,7 @@ body.mood .sun{
 .navbar button:hover {
   background-color: rgba(165, 249, 165, 0.316);
 }
+
 .profileNav,
 .menuDrop {
   display: none;
@@ -141,13 +166,13 @@ body.mood .sun{
   font-weight: 500;
   cursor: pointer;
 }
-.btnStart .btnlightmood2{
+.btnStart .btnlightmood2 {
   display: none;
 }
 
-.links .btnlightmood i{
+.links .mdlight i {
   font-size: 20px;
-} 
+}
 
 .contactSocial {
   display: flex;
@@ -280,6 +305,8 @@ body.mood .sun{
   width: 100%;
   padding: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 80px;
 }
@@ -364,6 +391,153 @@ body.mood .sun{
   font-size: 17px;
   color: var(--color-titles);
 }
+
+.section4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 70px;
+  height: auto;
+  width: 100%;
+}
+
+.section4 .titlepro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.titlepro h2 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-title2);
+}
+.titlepro i {
+  font-size: 50px;
+  color: var(--color-titles);
+}
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+.projects .ProjectTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProjectTitle h3 {
+  font-size: 45px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+  text-align: center;
+}
+.ProjectTitle h3 span {
+  color: var(--color-title2);
+}
+
+.pro {
+  height: auto;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: rgba(40, 40, 40, 0.101);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.imgproject img {
+  width: 100%;
+  height: 250px;
+  border-radius: 30px;
+}
+
+.SmlltitleProject h3 {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+  font-weight: 300;
+}
+.SmlltitleProject h3 span {
+  color: var(--color-title2);
+}
+
+.titleProject h1 {
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+}
+
+.languageForDev {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.languageForDev h2 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  background-color: var(--color-black);
+  color: var(--color-titles);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.displayWebsite a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.displayWebsite h3 {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: var(--color-titles);
+}
+
+.displayWebsite i {
+  font-size: 45px;
+  color: var(--color-title2);
+}
+.morePr {
+  height: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.morePr.active {
+  display: flex;
+}
+.btnMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnMore button {
+  padding: 8px 20px;
+  background-color: var(--color-title2);
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--color-black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
 @media screen and (max-width: 750px) {
   .section1 {
     display: flex;
@@ -374,6 +548,7 @@ body.mood .sun{
     gap: 50px;
     padding: 10px;
   }
+
   .navbar {
     background-color: var(--color-title2);
     padding: 30px;
@@ -393,10 +568,10 @@ body.mood .sun{
     border: 1px solid transparent;
     color: var(--color-titles);
   }
-  .btnStart .btnlightmood2 i{
+  .btnStart .btnlightmood2 i {
     font-size: 20px;
   }
-  .btnStart{
+  .btnStart {
     display: flex;
     gap: 5px;
   }
@@ -573,5 +748,28 @@ body.mood .sun{
     width: 100%;
     height: auto;
     gap: 20px;
+  }
+
+  .section4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    height: auto;
+    width: 100%;
+  }
+  .imgproject img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+  }
+
+  .morePr {
+    height: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
   }
 }
