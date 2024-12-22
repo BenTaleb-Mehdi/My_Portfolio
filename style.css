@@ -454,7 +454,7 @@ body.mood .sun {
 .imgproject img {
   width: 100%;
   height: 250px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .SmlltitleProject h3 {
@@ -588,7 +588,6 @@ body.mood .sun {
   background-color: transparent;
   width: 100%;
   padding: 100px;
- 
 }
 
 .followbyEmail {
@@ -733,7 +732,6 @@ body.mood .sun {
   padding: 10px;
   border: 1px solid grey;
   outline: 0;
-  
 }
 
 .messageform button {
@@ -754,8 +752,233 @@ body.mood .sun {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
- 
 }
+
+.section5 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footerContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+.imgContact img {
+  width: 100%;
+  height: auto;
+}
+.footerContact form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  gap: 13px;
+  height: auto;
+  width: 50%;
+}
+form h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+form label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-grey);
+  color: var(--color-titles);
+  transition: 0.4s;
+}
+form input:hover{
+   border-bottom: 1px solid transparent;
+}
+form .messageTxt {
+  width: 100%;
+  height: 6rem;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid var(--color-grey);
+  background-color: transparent;
+  transition: 0.4s;
+  color: var(--color-titles);
+}
+form .messageTxt:hover{
+  border: 1px solid transparent;
+}
+form button {
+  padding: 10px 30px;
+  font-weight: 500;
+  color: black;
+  background-color: var(--color-title2);
+  outline: 0;
+  border: 1px solid transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+form button:hover {
+  transform: scale(0.9);
+}
+.titlefooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+  margin-top: 10%;
+}
+
+.titlefooter h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: var(--color-title2);
+  font-weight: 600;
+}
+
+.titlefooter i {
+  color: var(--color-titles);
+  font-size: 60px;
+}
+
+.titlefooter .titleContact {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: var(--color-titles);
+  font-weight: 600;
+}
+.titlefooter .titleContact span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: var(--color-title2);
+  font-weight: 600;
+}
+
+/* ---------------- section footer ------------------*/
+
+.section6 {
+  margin-top: 100px;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ft1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+  width: 100%;
+}
+
+.titleft1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.titleft1 h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  color: var(--color-titles);
+  font-weight: 500;
+}
+
+.titleft1 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: var(--color-title2);
+}
+.ft1descteption p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-titles);
+}
+
+.ft1descteption p span {
+  color: var(--color-title2);
+}
+.ft1Socialmedia {
+  display: flex;
+  gap: 10px;
+}
+.ft1Socialmedia a {
+  text-decoration: none;
+  font-size: 35px;
+  color: var(--color-titles);
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(0.99);
+}
+.ft1Socialmedia a:hover {
+  color: var(--color-title2);
+  transform: scale(0.9);
+}
+.ft2 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  height: auto;
+}
+
+.copyright p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: var(--color-titles);
+}
+.copyright a {
+  font-size: 13px;
+  color: var(--color-title2);
+}
+
+.menuft2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuft2 button {
+  padding: 7px 10px;
+  background-color: transparent;
+  color: var(--color-titles);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 0;
+  border: 1px solid transparent;
+  transition: 0.4s;
+  transform: scale(0.99);
+}
+.menuft2 button:hover {
+  color: var(--color-title2);
+  transform: scale(0.9);
+}
+
 @media screen and (max-width: 750px) {
   .section1 {
     display: flex;
@@ -981,7 +1204,7 @@ body.mood .sun {
   .imgproject img {
     width: 100%;
     height: auto;
-    border-radius: 30px;
+     border-radius: 10px;
   }
   .projects {
     display: flex;
@@ -1153,5 +1376,157 @@ body.mood .sun {
     padding: 10px;
     border: 1px solid grey;
     outline: 0;
+  }
+
+  /*------------ for footer :*/
+
+  .section5 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footerContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+  }
+  .footerContact form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    gap: 13px;
+    height: auto;
+    width: 100%;
+  }
+
+  .titlefooter h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--color-title2);
+    font-weight: 600;
+  }
+
+  .titlefooter i {
+    color: var(--color-titles);
+    font-size: 60px;
+  }
+
+  .titlefooter .titleContact {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--color-titles);
+    font-weight: 600;
+  }
+  .titlefooter .titleContact span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    color: var(--color-title2);
+    font-weight: 600;
+  }
+
+  /*---------------- respansive design for footer*/
+  .section6 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .ft1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    width: 100%;
+  }
+
+  .titleft1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .titleft1 h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: var(--color-titles);
+    font-weight: 500;
+  }
+
+  .titleft1 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: var(--color-title2);
+  }
+  .ft1descteption {
+  }
+  .ft1descteption p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ft1descteption p span {
+    color: var(--color-title2);
+  }
+  .ft1Socialmedia {
+    display: flex;
+    gap: 10px;
+  }
+  .ft1Socialmedia a {
+    text-decoration: none;
+    font-size: 35px;
+    color: var(--color-titles);
+    cursor: pointer;
+  }
+
+  .ft2 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    height: auto;
+  }
+
+  .copyright p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--color-titles);
+  }
+  .copyright a {
+    font-size: 13px;
+    color: var(--color-title2);
+  }
+
+  .menuft2 {
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .menuft2 button {
+    padding: 7px 10px;
+    background-color: transparent;
+    color: var(--color-titles);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: 0;
+    border: 1px solid transparent;
   }
 }
