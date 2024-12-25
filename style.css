@@ -11,6 +11,7 @@
   --color-black: black;
   --background-icon: rgb(21, 21, 21);
   --color-grey: grey;
+  --color-scroll0-green: rgba(65, 203, 90, 0.514);
 }
 body.mood {
   --color-background: rgba(255, 255, 255, 0.79);
@@ -19,6 +20,7 @@ body.mood {
   --color-black: rgb(255, 255, 255);
   --background-icon: rgb(255, 255, 255);
   --color-grey: grey;
+  --color-scroll0-green: rgba(65, 203, 90, 0.514);
 }
 body {
   height: auto;
@@ -38,14 +40,39 @@ body.mood .sun {
 .mdlight .sun {
   display: block;
 }
+.btn0scroll {
+  position: fixed;
+  top: 90vh;
+  left: 90%;
+  display: none;
+  z-index: 1000;
+}
 
+.btn0scroll button {
+  background-color: var(--color-scroll0-green);
+  padding: 10px;
+  border-radius: 50%;
+  outline: 0;
+  border: 1px solid transparent;
+  transition: 0.4s;
+  transform: scale(0.99);
+  cursor: pointer;
+}
+.btn0scroll button:hover {
+  background-color: var(--color-title2);
+  transform: scale(0.95);
+}
+.btn0scroll button i {
+  font-size: 25px;
+  color: var(--color-black);
+}
 .section1 {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  gap: 90px;
+  gap: 100px;
 }
 
 .section1 .infoPerson {
@@ -87,6 +114,7 @@ body.mood .sun {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: 10%;
 }
 
 .navbar button {
@@ -165,7 +193,21 @@ body.mood .sun {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   cursor: pointer;
+
+
 }
+.btnStart .btnFollow,.btnMessage{
+  transition: 0.4s;
+  transform: scale(0.99);
+  z-index: -1;
+}
+
+.btnStart .btnFollow:hover,.btnMessage:hover {
+  color: var(--color-black);
+  transform: scale(0.9);
+}
+
+
 .btnStart .btnlightmood2 {
   display: none;
 }
@@ -213,10 +255,10 @@ body.mood .sun {
 }
 
 .section2 {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: var(--color-background);
-  padding: 20px;
+  padding: 80px 20px;
 }
 
 .section2 .bartitle {
@@ -292,18 +334,23 @@ body.mood .sun {
   font-weight: 500;
   cursor: pointer;
 }
-
+.btnabout button a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
 .btnabout button i {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /*section skills */
 
 .section3 {
-  height: 100vh;
+  height: auto;
   width: 100%;
-  padding: 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -555,6 +602,7 @@ body.mood .sun {
   position: fixed;
   backdrop-filter: blur(7px);
   background-color: rgba(0, 0, 0, 0.447);
+  z-index: 1000;
 }
 .formFollow.active {
   transform: translateX(0%);
@@ -691,6 +739,7 @@ body.mood .sun {
   position: fixed;
   backdrop-filter: blur(7px);
   background-color: rgba(0, 0, 0, 0.447);
+  z-index: 1000;
 }
 .formmessage.active {
   transform: translateX(0%);
@@ -807,8 +856,8 @@ form input {
   color: var(--color-titles);
   transition: 0.4s;
 }
-form input:hover{
-   border-bottom: 1px solid transparent;
+form input:hover {
+  border-bottom: 1px solid transparent;
 }
 form .messageTxt {
   width: 100%;
@@ -820,7 +869,7 @@ form .messageTxt {
   transition: 0.4s;
   color: var(--color-titles);
 }
-form .messageTxt:hover{
+form .messageTxt:hover {
   border: 1px solid transparent;
 }
 form button {
@@ -980,12 +1029,19 @@ form button:hover {
 }
 
 @media screen and (max-width: 750px) {
+  .btn0scroll {
+    position: fixed;
+    top: 90vh;
+    left: 80%;
+    display: block;
+    z-index: 1000;
+  }
   .section1 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     gap: 50px;
     padding: 20px;
   }
@@ -1116,7 +1172,7 @@ form button:hover {
   }
 
   .section2 {
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: var(--color-background);
     padding: 20px;
@@ -1126,7 +1182,7 @@ form button:hover {
   }
   .bartitle h2,
   .titleSk h2 {
-    font-size: 40px;
+    font-size: 35px;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--color-title2);
   }
@@ -1204,7 +1260,7 @@ form button:hover {
   .imgproject img {
     width: 100%;
     height: auto;
-     border-radius: 10px;
+    border-radius: 10px;
   }
   .projects {
     display: flex;
@@ -1213,7 +1269,24 @@ form button:hover {
     flex-direction: column;
     gap: 50px;
   }
-
+  .titlepro h2 {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-title2);
+  }
+  .titlepro i {
+    font-size: 30px;
+    color: var(--color-titles);
+  }
+  .ProjectTitle h3 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-titles);
+    text-align: center;
+  }
+  .ProjectTitle h3 span {
+    color: var(--color-title2);
+  }
   .morePr {
     height: auto;
     display: none;
@@ -1417,18 +1490,18 @@ form button:hover {
 
   .titlefooter i {
     color: var(--color-titles);
-    font-size: 60px;
+    font-size: 30px;
   }
 
   .titlefooter .titleContact {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     color: var(--color-titles);
     font-weight: 600;
   }
   .titlefooter .titleContact span {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 45px;
+    font-size: 25px;
     color: var(--color-title2);
     font-weight: 600;
   }
@@ -1475,7 +1548,7 @@ form button:hover {
   .ft1descteption p {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: var(--color-titles);
     width: 100%;
     text-align: center;
   }

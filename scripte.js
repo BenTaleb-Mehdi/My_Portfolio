@@ -47,13 +47,11 @@ const formFollow = document.querySelector(".formFollow"),
 
 btnFollow.addEventListener("click", () => {
   formFollow.classList.toggle("active");
-  
 });
 
 closeFormFpllow.addEventListener("click", () => {
   formFollow.classList.remove("active");
 });
-
 
 btnformmessage.addEventListener("click", () => {
   formMessage.classList.toggle("active");
@@ -62,3 +60,147 @@ btnformmessage.addEventListener("click", () => {
 closeFormMessage.addEventListener("click", () => {
   formMessage.classList.remove("active");
 });
+
+//srolling settings ........
+//scroll btn about me
+const scrollabout = document.querySelector(".scrollabout"),
+  scrollaboutnav = document.querySelector(".scrollaboutnav");
+
+//scroll btn skills
+const scrollskills = document.querySelector(".scrollskills"),
+  scrollskillsnav = document.querySelector(".scrollskillsnav");
+
+//scroll btn pro
+const scrollpro = document.querySelector(".scrollpro"),
+  scrollpronav = document.querySelector(".scrollpronav");
+
+//scroll btn contact
+const scrollcontact = document.querySelector(".scrollcontact"),
+  scrollcontactnav = document.querySelector(".scrollcontactnav");
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+});
+
+//scroll about
+scrollabout.addEventListener("click", () => {
+  if (window.screenY < 756) {
+    window.scrollTo({
+      top: 756,
+      behavior: "smooth",
+    });
+  }
+
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
+});
+
+scrollaboutnav.addEventListener("click", () => {
+  if (window.screenY < 769) {
+    window.scrollTo({
+      top: 769,
+      behavior: "smooth",
+    });
+  }
+});
+
+//scroll skills
+
+scrollskills.addEventListener("click", () => {
+  if (window.screenY < 1373) {
+    window.scrollTo({
+      top: 1373,
+      behavior: "smooth",
+    });
+  }
+
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
+});
+
+scrollskillsnav.addEventListener("click", () => {
+  if (window.screenY < 1620) {
+    window.scrollTo({
+      top: 1620,
+      behavior: "smooth",
+    });
+  }
+});
+
+//scroll project
+
+scrollpro.addEventListener("click", () => {
+  if (window.screenY < 2112) {
+    window.scrollTo({
+      top: 2112,
+      behavior: "smooth",
+    });
+  }
+
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
+});
+
+scrollpronav.addEventListener("click", () => {
+  if (window.screenY < 2420) {
+    window.scrollTo({
+      top: 2420,
+      behavior: "smooth",
+    });
+  }
+});
+
+//scroll contact
+
+scrollcontact.addEventListener("click", () => {
+  if (window.screenY < 4384) {
+    window.scrollTo({
+      top: 4384,
+      behavior: "smooth",
+    });
+  }
+
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
+});
+
+scrollcontactnav.addEventListener("click", () => {
+  if (window.screenY < 4571) {
+    window.scrollTo({
+      top: 4000,
+      behavior: "smooth",
+    });
+  }
+});
+
+//scroll first
+
+const buttonscrollA0 = document.querySelector(".buttonscrollA0"),
+  btn0scroll = document.querySelector(".btn0scroll");
+buttonscrollA0.addEventListener("click", () => {
+  if (window.screenY < 700) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+});
+window.addEventListener("scroll", () => {
+
+  if (window.scrollY < 700) {
+    btn0scroll.style.display = "none";
+  } else {
+    btn0scroll.style.display = "block";
+  }
+
+});
+
+
+
+// scroll animations 
+
+
+
