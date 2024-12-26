@@ -73,8 +73,27 @@ body.mood .sun {
   flex-direction: column;
   height: 100vh;
   gap: 100px;
+  /* حركة سلسة */
 }
-
+.section1,
+.section2,
+.section3,
+.titlepro,
+.ProjectTitle,
+.section5 {
+  opacity: 0; /* مخفي في البداية */
+  transform: translateY(180px); /* ابدأ من مكان أسفل قليلاً */
+  transition: all 1s ease;
+}
+.section1.visible,
+.section2.visible,
+.section3.visible,
+.titlepro.visible,
+.ProjectTitle.visible,
+.section5.visible {
+  opacity: 1; /* يظهر بالكامل */
+  transform: translateY(0);
+}
 .section1 .infoPerson {
   display: flex;
   align-items: center;
@@ -193,20 +212,19 @@ body.mood .sun {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   cursor: pointer;
-
-
 }
-.btnStart .btnFollow,.btnMessage{
+.btnStart .btnFollow,
+.btnMessage {
   transition: 0.4s;
   transform: scale(0.99);
   z-index: -1;
 }
 
-.btnStart .btnFollow:hover,.btnMessage:hover {
+.btnStart .btnFollow:hover,
+.btnMessage:hover {
   color: var(--color-black);
   transform: scale(0.9);
 }
-
 
 .btnStart .btnlightmood2 {
   display: none;
@@ -482,11 +500,40 @@ body.mood .sun {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--color-titles);
   text-align: center;
+  margin-bottom: 20px;
 }
 .ProjectTitle h3 span {
   color: var(--color-title2);
 }
+#pro1,
+#pro3,
+#pro6 {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 1s ease, opacity 0.5s ease;
+}
 
+#pro1.visible,
+#pro3.visible,
+#pro5.visible {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+#pro2,
+#pro4,
+#pro6 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1s ease, opacity 0.5s ease;
+}
+
+#pro2.visible,
+#pro4.visible,
+#pro6.visible {
+  opacity: 1;
+  transform: translateX(0px);
+}
 .pro {
   height: auto;
   padding: 40px;
@@ -560,14 +607,19 @@ body.mood .sun {
 }
 .morePr {
   height: auto;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.4s;
   gap: 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 .morePr.active {
-  display: flex;
+  max-height: 500px;
+  opacity: 1;
 }
 .btnMore {
   display: flex;
@@ -811,6 +863,21 @@ body.mood .sun {
   justify-content: center;
   flex-direction: column;
 }
+#forminformationUserScroll {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+#imgCoantactScroll {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+#forminformationUserScroll.visible,
+#imgCoantactScroll.visible {
+  opacity: 1;
+  transform: translateX(0px);
+}
 .footerContact {
   display: flex;
   align-items: center;
@@ -934,7 +1001,15 @@ form button:hover {
   justify-content: center;
   flex-direction: column;
 }
-
+#scrollft1 {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+#scrollft1.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .ft1 {
   display: flex;
   align-items: center;
@@ -996,7 +1071,21 @@ form button:hover {
   padding: 30px;
   height: auto;
 }
-
+#copyrightScroll {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+#menuft2Scroll {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+#copyrightScroll.visible,
+#menuft2Scroll.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .copyright p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -1069,10 +1158,13 @@ form button:hover {
   .btnStart .btnlightmood2 i {
     font-size: 20px;
   }
+
   .btnStart {
     display: flex;
     gap: 5px;
+    z-index: 1000;
   }
+
   .profileNav h2 {
     width: 100%;
     font-size: 15px;
@@ -1171,6 +1263,27 @@ form button:hover {
     display: none;
   }
 
+  .btnabout button {
+    padding: 8px 20px;
+    background-color: var(--color-title2);
+    outline: 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: var(--color-black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .btnabout button a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+  .btnabout button i {
+    font-size: 16px;
+    font-weight: 600;
+  }
   .section2 {
     height: auto;
     width: 100%;
@@ -1287,12 +1400,30 @@ form button:hover {
   .ProjectTitle h3 span {
     color: var(--color-title2);
   }
+  /*
   .morePr {
     height: auto;
     display: none;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+    */
+  .morePr {
+    height: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  .morePr.active {
+    max-height: 1000px;
+    opacity: 1;
   }
   /* rispnasive for form following ......*/
 
@@ -1429,6 +1560,7 @@ form button:hover {
     background-color: rgba(0, 0, 0, 0.447);
     padding: 80px 0px;
   }
+
   .messageform h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -1601,5 +1733,12 @@ form button:hover {
     font-family: Arial, Helvetica, sans-serif;
     outline: 0;
     border: 1px solid transparent;
+  }
+  .btn0scroll {
+    position: fixed;
+    top: 80vh;
+    left: 80%;
+    display: none;
+    z-index: 1000;
   }
 }

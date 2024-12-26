@@ -32,10 +32,17 @@ btnLightMode2.addEventListener("click", () => {
 });
 
 const btnMore = document.querySelector(".btnMore"),
-  displayMore = document.querySelector(".morePr");
+  displayMore = document.querySelector(".morePr"),
+  namebtn = document.querySelector(".namebtn");
 
 btnMore.addEventListener("click", () => {
   displayMore.classList.toggle("active");
+
+  if (displayMore.classList.contains("active")) {
+    namebtn.textContent = "Hide";
+  } else {
+    namebtn.textContent = "More";
+  }
 });
 
 const formFollow = document.querySelector(".formFollow"),
@@ -189,18 +196,41 @@ buttonscrollA0.addEventListener("click", () => {
   }
 });
 window.addEventListener("scroll", () => {
-
   if (window.scrollY < 700) {
     btn0scroll.style.display = "none";
   } else {
     btn0scroll.style.display = "block";
   }
-
 });
 
+// scroll animations
+const sections = document.querySelectorAll(
+  ".section1, .section2, .section3, .titlepro,.ProjectTitle, .section5, .section6,.morePr,#scrollft1"
+);
+const projects = document.querySelectorAll(
+  "#pro1, #pro3, #pro2, #pro4, #pro5, #pro6 ,#imgCoantactScroll, #forminformationUserScroll,#copyrightScroll,#menuft2Scroll"
+);
 
+window.addEventListener("scroll", () => {
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-// scroll animations 
+    if (sectionTop < windowHeight - 120) {
+      section.classList.add("visible");
+    } else {
+      section.classList.remove("visible");
+    }
+  });
 
+  projects.forEach((pro) => {
+    const projectTop = pro.getBoundingClientRect().top;
+    const projectHeigt = window.innerHeight;
 
-
+    if (projectTop < projectHeigt - 100) {
+      pro.classList.add("visible");
+    } else {
+      pro.classList.remove("visible");
+    }
+  });
+});
