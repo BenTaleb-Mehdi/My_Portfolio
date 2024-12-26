@@ -73,7 +73,7 @@ body.mood .sun {
   flex-direction: column;
   height: 100vh;
   gap: 100px;
-  /* حركة سلسة */
+  width: 100%;
 }
 .section1,
 .section2,
@@ -506,34 +506,28 @@ body.mood .sun {
   color: var(--color-title2);
 }
 #pro1,
+#pro2,
 #pro3,
+#pro4,
+#pro5,
 #pro6 {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateY(100px);
   transition: transform 1s ease, opacity 0.5s ease;
+
 }
 
 #pro1.visible,
-#pro3.visible,
-#pro5.visible {
-  opacity: 1;
-  transform: translateX(0px);
-}
-
-#pro2,
-#pro4,
-#pro6 {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: transform 1s ease, opacity 0.5s ease;
-}
-
 #pro2.visible,
+#pro3.visible,
 #pro4.visible,
+#pro5.visible,
 #pro6.visible {
   opacity: 1;
-  transform: translateX(0px);
+  transform: translateY(0px);
 }
+
+
 .pro {
   height: auto;
   padding: 40px;
@@ -611,11 +605,12 @@ body.mood .sun {
   align-items: center;
   justify-content: center;
   transition: 0.4s;
-  gap: 10px;
+  gap: 20px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.5s ease, opacity 0.5s ease;
+  width: 100%;
 }
 .morePr.active {
   max-height: 500px;
@@ -865,12 +860,12 @@ body.mood .sun {
 }
 #forminformationUserScroll {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateY(100px);
   transition: transform 1s ease, opacity 1s ease;
 }
 #imgCoantactScroll {
   opacity: 0;
-  transform: translateX(-100px);
+  transform: translateY(-100px);
   transition: transform 1s ease, opacity 1s ease;
 }
 #forminformationUserScroll.visible,
@@ -1120,11 +1115,12 @@ form button:hover {
 @media screen and (max-width: 750px) {
   .btn0scroll {
     position: fixed;
-    top: 90vh;
-    left: 80%;
-    display: block;
-    z-index: 1000;
+    top: 85vh;
+    left: 75%;
+    display: none;
+    
   }
+ 
   .section1 {
     display: flex;
     align-items: center;
@@ -1415,7 +1411,7 @@ form button:hover {
     align-items: center;
     justify-content: center;
     transition: 0.4s;
-    gap: 10px;
+    gap: 20px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -1675,8 +1671,7 @@ form button:hover {
     font-size: 10px;
     color: var(--color-title2);
   }
-  .ft1descteption {
-  }
+ 
   .ft1descteption p {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -1734,11 +1729,7 @@ form button:hover {
     outline: 0;
     border: 1px solid transparent;
   }
-  .btn0scroll {
-    position: fixed;
-    top: 80vh;
-    left: 80%;
-    display: none;
-    z-index: 1000;
-  }
+
+
+
 }
