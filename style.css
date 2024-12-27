@@ -75,7 +75,16 @@ body.mood .sun {
   gap: 100px;
   width: 100%;
 }
-.section1,
+.section1 {
+  opacity: 0;
+  transform: translateY(-90px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.section1.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .section2,
 .section3,
 .titlepro,
@@ -85,7 +94,7 @@ body.mood .sun {
   transform: translateY(180px); /* ابدأ من مكان أسفل قليلاً */
   transition: all 1s ease;
 }
-.section1.visible,
+
 .section2.visible,
 .section3.visible,
 .titlepro.visible,
@@ -299,7 +308,15 @@ body.mood .sun {
   font-size: 60px;
   color: var(--color-titles);
 }
-
+.bartitle{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease,opacity 1s ease;
+}
+.bartitle.visible{
+  opacity: 1;
+  transform: translateY(0px);
+}
 .textBoutMe {
   display: flex;
   align-items: flex-start;
@@ -308,6 +325,15 @@ body.mood .sun {
   gap: 20px;
   height: auto;
   width: 100%;
+}
+.textBoutMe {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+.textBoutMe.visible {
+  opacity: 1;
+  transform: translateX(0px);
 }
 .textBoutMe .welcome h2 {
   font-size: 45px;
@@ -340,7 +366,15 @@ body.mood .sun {
   height: auto;
   width: 100%;
 }
-
+.imgAbout{
+  opacity: 0;
+  transform: translateX(150px);
+  transition: transform 1s ease,opacity 1s ease;
+}
+.imgAbout.visible{
+  opacity: 1;
+  transform: translateX(0px);
+}
 .btnabout button {
   padding: 8px 20px;
   background-color: var(--color-title2);
@@ -387,6 +421,15 @@ body.mood .sun {
   padding: 30px;
   border-radius: 20px;
 }
+.titleSk{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease,opacity 1s ease;
+}
+.titleSk.visible{
+  opacity: 1;
+  transform: translateY(0px);
+}
 .titleSk h2 {
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
@@ -430,6 +473,15 @@ body.mood .sun {
 .prSkills h3 span {
   color: var(--color-title2);
 }
+.prSkills{
+  opacity: 0;
+  transform: translate(100px);
+  transition: transform 1s ease,opacity 1s ease;
+}
+.prSkills.visible{
+  opacity: 1;
+  transform: translate(0px);
+}
 .skill {
   display: flex;
   align-items: center;
@@ -451,6 +503,60 @@ body.mood .sun {
   width: 50%;
   gap: 20px;
 }
+/*skills scrolling */
+#skillScroll {
+  display: inline-flex;
+  animation: scroll 12s linear infinite; /* Smooth, infinite scrolling */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+  0% {
+    transform: translateX(15%);
+  }
+
+  50% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+  50% {
+    transform: translateX(-15%);
+  }
+}
+#skillScroll2 {
+  display: inline-flex;
+  animation: scroll2 12s linear infinite; /* Smooth, infinite scrolling */
+}
+
+@keyframes scroll2 {
+  100% {
+    transform: translateX(15%);
+  }
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+
+  100% {
+    transform: translateX(-15%);
+  }
+  50% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(-15%);
+  }
+}
+
 .titlePack h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
@@ -514,7 +620,6 @@ body.mood .sun {
   opacity: 0;
   transform: translateY(100px);
   transition: transform 1s ease, opacity 0.5s ease;
-
 }
 
 #pro1.visible,
@@ -526,7 +631,6 @@ body.mood .sun {
   opacity: 1;
   transform: translateY(0px);
 }
-
 
 .pro {
   height: auto;
@@ -858,14 +962,31 @@ body.mood .sun {
   justify-content: center;
   flex-direction: column;
 }
-#forminformationUserScroll {
+.titleContact{
   opacity: 0;
   transform: translateY(100px);
+  transition: transform 1s ease,opacity 1s ease;
+}
+.titleContact.visible{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+.tContact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#forminformationUserScroll {
+  opacity: 0;
+  transform: translateY(-100px);
   transition: transform 1s ease, opacity 1s ease;
 }
 #imgCoantactScroll {
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-150px);
   transition: transform 1s ease, opacity 1s ease;
 }
 #forminformationUserScroll.visible,
@@ -1118,9 +1239,8 @@ form button:hover {
     top: 85vh;
     left: 75%;
     display: none;
-    
   }
- 
+
   .section1 {
     display: flex;
     align-items: center;
@@ -1671,7 +1791,7 @@ form button:hover {
     font-size: 10px;
     color: var(--color-title2);
   }
- 
+
   .ft1descteption p {
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
@@ -1730,6 +1850,63 @@ form button:hover {
     border: 1px solid transparent;
   }
 
+  /*SCROLLING SKILLS .... */
+  #skillScroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    animation: scroll 7s linear infinite; /* Smooth, infinite scrolling */
+  }
 
+  @keyframes scroll {
+    0% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+    0% {
+      transform: translateY(10%);
+    }
 
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(10%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+  #skillScroll2 {
+    display: inline-flex;
+    animation: scroll2 7s linear infinite; /* Smooth, infinite scrolling */
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  @keyframes scroll2 {
+    100% {
+      transform: translateY(10%);
+    }
+    0% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(10%);
+    }
+
+    100% {
+      transform: translateY(-10%);
+    }
+    50% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }
 }

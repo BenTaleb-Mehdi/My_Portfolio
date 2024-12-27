@@ -205,10 +205,10 @@ window.addEventListener("scroll", () => {
 
 // scroll animations
 const sections = document.querySelectorAll(
-  ".section1, .section2, .section3, .titlepro,.ProjectTitle, .section5, .section6,.morePr,#scrollft1"
+  ".section2, .section3, .titlepro,.ProjectTitle, .section5, .section6,.morePr,#scrollft1,.bartitle,.titleSk,.prSkills,.titleContact"
 );
 const projects = document.querySelectorAll(
-  "#pro1, #pro3, #pro2, #pro4, #pro5, #pro6 ,#imgCoantactScroll, #forminformationUserScroll,#copyrightScroll,#menuft2Scroll"
+  "#pro1, #pro3, #pro2, #pro4, #pro5, #pro6 ,#imgCoantactScroll, #forminformationUserScroll,#copyrightScroll,#menuft2Scroll,.textBoutMe,.imgAbout"
 );
 
 window.addEventListener("scroll", () => {
@@ -233,4 +233,24 @@ window.addEventListener("scroll", () => {
       pro.classList.remove("visible");
     }
   });
+});
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const firstPage = document.querySelector('.section1');
+
+  setTimeout(() => {
+    firstPage.classList.add('visible')
+    firstPage.scrollIntoView({behavior :'smooth'})
+  }, 400);
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillScroll = document.querySelectorAll("#skillScroll, skillScroll2");
+
+  setTimeout(() => {
+    skillScroll.classList.add("visible");
+    skillScroll.scrollIntoView({ behavior: "smooth" });
+  }, 400);
 });
