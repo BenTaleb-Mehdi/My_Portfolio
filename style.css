@@ -375,26 +375,26 @@ body.mood .sun {
   opacity: 1;
   transform: translateX(0px);
 }
-.btnabout button {
-  padding: 8px 20px;
+ .btnabout a {
+  padding: 8px 10px;
   background-color: var(--color-title2);
   outline: 0;
   border: 1px solid transparent;
   border-radius: 10px;
   color: var(--color-black);
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
+  font-weight: 550;
   cursor: pointer;
-}
-.btnabout button a {
+  display: inline-flex;
+  align-items: center; /* Align text and icon */
   text-decoration: none;
-  color: var(--color-black);
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-size: 13px;
 }
-.btnabout button i {
+
+.btnabout a i {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 8px; /* Add space between text and icon */
 }
 
 /*section skills */
@@ -1379,27 +1379,28 @@ form button:hover {
     display: none;
   }
 
-  .btnabout button {
-    padding: 8px 20px;
-    background-color: var(--color-title2);
-    outline: 0;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    color: var(--color-black);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  .btnabout button a {
-    text-decoration: none;
-    color: var(--color-black);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-  }
-  .btnabout button i {
-    font-size: 16px;
-    font-weight: 600;
-  }
+ .btnabout a {
+  padding: 9px 8px;
+  background-color: var(--color-title2);
+  outline: 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--color-black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center; /* Align text and icon */
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.btnabout a i {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px; /* Add space between text and icon */
+}
+
   .section2 {
     height: auto;
     width: 100%;
