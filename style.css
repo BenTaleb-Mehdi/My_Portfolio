@@ -475,12 +475,12 @@ body.mood .sun {
 }
 .prSkills{
   opacity: 0;
-  transform: translate(100px);
+  transform: translateY(100px);
   transition: transform 1s ease,opacity 1s ease;
 }
 .prSkills.visible{
   opacity: 1;
-  transform: translate(0px);
+  transform: translateY(0px);
 }
 .skill {
   display: flex;
